@@ -57,6 +57,7 @@
            height: 2px;
            background-color: rgb(209, 207, 207);
            margin: 5px;
+           transition: all 0.3s ease;
 
        }
 
@@ -75,6 +76,7 @@
                 align-items: center;
                 width: 50%;
                 transform: translateX(100%);
+                transition: transform 0.5s ease-in;
            }
 
            .nav-links li{
@@ -87,6 +89,35 @@
            }
 
        }
+
+       .nav-active{
+           transform: translateX(0%);
+       }
+
+       @keyframes navLinkFade{
+           from{
+            opacity: 0;
+            transform: translateX(50px);
+           }
+
+           to{
+            opacity: 1;
+            transform: translateX(0px);
+           }
+       }
+
+       .toggle .line1{
+           transform: rotate(-45deg) translate(-5px,6px);
+       }
+       .toggle .line2{
+            opacity: 0;
+       }
+       .toggle .line3{
+            transform: rotate(45deg) translate(-5px,-6px);
+       }
+
+
+
     </style>
 </head>
 <body>
@@ -107,6 +138,8 @@
         </div>
     </nav>
     <h1>Let's start this join over with vanilla css</h1>
+
+    <script src="app.js"></script>
 </body>
 </html>
 
