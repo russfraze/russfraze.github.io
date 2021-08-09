@@ -116,7 +116,32 @@
             transform: rotate(45deg) translate(-5px,-6px);
        }
 
+       .landing{
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           align-items: center;
+           height: 800px;
+           background-color: darkolivegreen;
+       }
 
+       .landing img{
+           max-height: 365px;
+           max-width: 365px;
+           border-radius: 50%;
+       }
+
+       .about{
+        height: 800px;
+       }
+
+       .projects{
+        height: 800px;
+       }
+
+       .skills{
+           height: 800px;
+       }
 
     </style>
 </head>
@@ -126,9 +151,9 @@
             <h4>Russell Fraze</h4>
         </div>
         <ul class="nav-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Skills</a></li>
+            <li><a href="#about_section">About</a></li>
+            <li><a href="#projects_section">Projects</a></li>
+            <li><a href="#skills_section">Skills</a></li>
         </ul>
 
         <div class="burger">
@@ -137,7 +162,27 @@
             <div class="line3"></div>
         </div>
     </nav>
-    <h1>Let's start this join over with vanilla css</h1>
+    <div class="landing">
+        
+        <img src="russ.jpg" alt="">
+    </div>
+
+    <div class="about">
+        <a id="about_section">
+            <h3>About</h3>
+        </a>
+    </div>
+
+    <div class="projects">
+        <a id="projects_section">
+            <h3>Projects</h3>
+        </a>
+    </div>
+
+    <div class="skills">
+        <a id="skills_section"></a>
+        <h3>Skills</h3>
+    </div>
 
     <script src="app.js"></script>
 </body>
