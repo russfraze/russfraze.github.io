@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,68 +11,82 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
     <style>
-        *{
+        * {
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
         }
-       h1{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 200;
-       }
-       h3{
-        font-family: 'Roboto', sans-serif;
-        font-weight: 500;
-        
-       }
-       nav{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        min-height: 8vh;
-        font-family: 'Roboto', sans-serif;
-        background-color: darkslategray;
-       }
-       .logo{
-           color: rgb(209, 207, 207);
-           text-transform: uppercase;
-           letter-spacing: 5px;
-           font-size: 20px;
-       }
-       .nav-links{
-           display: flex;
-           justify-content: space-around;
-           width: 30%;
-           font-size: 14px;
-           letter-spacing: 3px;
-       }
-       .nav-links li{
-           list-style: none;
-       }
-       .nav-links a{
-        color: rgb(209, 207, 207);
-        text-decoration: none;
-       }
 
-       .burger{
-           display: none;
-       }
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 200;
+        }
 
-       .burger div{
-           width: 25px;
-           height: 2px;
-           background-color: rgb(209, 207, 207);
-           margin: 5px;
-           transition: all 0.3s ease;
+        h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
 
-       }
+        }
 
-       @media screen and (max-width:768px){
-           body{
-            overflow-x: hidden;
-           }
-           .nav-links{
-               position: absolute;
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 8vh;
+            font-family: 'Roboto', sans-serif;
+            background-color: darkslategray;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .logo {
+            color: rgb(209, 207, 207);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            width: 30%;
+            font-size: 14px;
+            letter-spacing: 3px;
+        }
+
+        .nav-links li {
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgb(209, 207, 207);
+            text-decoration: none;
+        }
+
+        .burger {
+            display: none;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 2px;
+            background-color: rgb(209, 207, 207);
+            margin: 5px;
+            transition: all 0.3s ease;
+
+        }
+
+        @media screen and (max-width:768px) {
+            body {
+                overflow-x: hidden;
+            }
+
+            .nav-links {
+                position: absolute;
                 right: 0px;
                 height: 92vh;
                 top: 8vh;
@@ -82,76 +97,114 @@
                 width: 50%;
                 transform: translateX(100%);
                 transition: transform 0.5s ease-in;
-           }
+            }
 
-           .nav-links li{
-               opacity: 0;
-           }
+            .nav-links li {
+                opacity: 0;
+            }
 
-           .burger{
-               display: block;
-               cursor: pointer;
-           }
+            .burger {
+                display: block;
+                cursor: pointer;
+            }
 
-       }
+        }
 
-       .nav-active{
-           transform: translateX(0%);
-       }
+        .nav-active {
+            transform: translateX(0%);
+        }
 
-       @keyframes navLinkFade{
-           from{
+        @keyframes navLinkFade {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .toggle .line2 {
             opacity: 0;
-            transform: translateX(50px);
-           }
+        }
 
-           to{
-            opacity: 1;
-            transform: translateX(0px);
-           }
-       }
+        .toggle .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
 
-       .toggle .line1{
-           transform: rotate(-45deg) translate(-5px,6px);
-       }
-       .toggle .line2{
-            opacity: 0;
-       }
-       .toggle .line3{
-            transform: rotate(45deg) translate(-5px,-6px);
-       }
+        .landing {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 800px;
+            background-color: darkolivegreen;
+        }
 
-       .landing{
-           display: flex;
-           flex-direction: row;
-           justify-content: center;
-           align-items: center;
-           height: 800px;
-           background-color: darkolivegreen;
-       }
+        .landing img {
+            max-height: 365px;
+            max-width: 365px;
+            border-radius: 50%;
+        }
 
-       .landing img{
-           max-height: 365px;
-           max-width: 365px;
-           border-radius: 50%;
-       }
+        .about {
+            height: 800px;
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
 
-       .about{
-        height: 800px;
-       }
+        .section_bar {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: darkslategray;
+            min-height: 8vh;
+        }
 
-       .projects{
-        height: 800px;
-       }
+        .section_bar h3 {
+            color: rgb(209, 207, 207);
+            letter-spacing: 5px;
+            padding-left: 25px;
+            /* padding-top: 28px; */
+        }
 
-       .skills{
-           height: 800px;
-       }
+        .about h2 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
 
+        .about h3 {
+            color: rgb(209, 207, 207);
+            letter-spacing: 5px;
+        }
+
+        .about p {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            padding-top: 200px;
+        }
+
+        .projects {
+            height: 800px;
+        }
+
+        .skills {
+            height: 800px;
+        }
     </style>
 </head>
+
 <body>
-    <nav>
+    <nav class="sticky">
         <div class="logo">
             <h4>Russell Fraze</h4>
         </div>
@@ -168,28 +221,44 @@
         </div>
     </nav>
     <div class="landing">
-        
+
         <img src="russ.jpg" alt="">
     </div>
 
     <div class="about">
         <a id="about_section">
-            <h3>About</h3>
+            <div class="section_bar">
+                <h3>ABOUT</h3>
+            </div>
         </a>
+        <h2>My new personal statement will go in this area once I write it.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et suscipit sem. Aliquam dolor ipsum,
+            convallis eu dolor ut, ultricies mattis dolor. Quisque ac diam at nisl mattis tincidunt. Duis aliquet purus
+            sit amet sem vehicula, sit amet porta tortor tincidunt. Sed arcu eros, sollicitudin sed urna quis, malesuada
+            sollicitudin enim. Fusce et pharetra eros, vel tincidunt libero. Nulla eget cursus dolor. Donec sit amet
+            consequat nisl. </p>
+
+        <p> Maecenas vehicula id dui id gravida. Donec nunc enim, tincidunt vel odio vitae, commodo tempor augue. Ut ac
+            lectus quis dui auctor egestas. Phasellus et aliquam arcu, non bibendum odio. Curabitur volutpat a nunc sed
+            condimentum. Pellentesque velit mi, consectetur id ipsum eget, mollis varius dui.</p>
     </div>
 
     <div class="projects">
         <a id="projects_section">
-            <h3>Projects</h3>
+            <div class="section_bar">
+                <h3>PROJECTS</h3>
+            </div>
         </a>
     </div>
 
     <div class="skills">
         <a id="skills_section"></a>
-        <h3>Skills</h3>
+        <div class="section_bar">
+            <h3>SKILLS</h3>
+        </div>
     </div>
 
     <script src="app.js"></script>
 </body>
-</html>
 
+</html>
