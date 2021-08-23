@@ -223,28 +223,30 @@
 
         }
 
-        @media screen and (min-width: 40em) {
+        @media screen and (max-width:600px) {
             .cards {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: center;
             }
 
             .card {
-                flex: 0 1 calc(50% - 1em);
+                flex: 0 1 calc(80% - 1em);
             }
         }
 
-        @media screen and (min-width: 60em) {
+        @media screen and (min-width:600px) {
           
             .card {
-                flex: 0 1 calc(50% - 1em);
+                flex: 0 1 calc(48% - 1em);
             }
         }
 
 
-        @media screen and (min-width: 52em) {
-            .centered {}
+        @media screen and (min-width: 992px) {
+            .card {
+                flex: 0 1 calc(24% - 1em);
+            }  
         }
 
 
