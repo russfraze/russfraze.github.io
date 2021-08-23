@@ -17,16 +17,18 @@
             box-sizing: border-box;
         }
 
-        h1 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
             font-family: 'Roboto', sans-serif;
-            font-weight: 200;
+
         }
 
-        h3 {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 500;
 
-        }
 
         nav {
             display: flex;
@@ -153,13 +155,6 @@
             border-radius: 50%;
         }
 
-        .about {
-            height: 800px;
-            background-color: lightgray;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-        }
 
         .section_bar {
             display: flex;
@@ -168,6 +163,14 @@
             align-items: center;
             background-color: darkslategray;
             min-height: 8vh;
+        }
+
+        .about {
+            height: 800px;
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .section_bar h3 {
@@ -180,6 +183,8 @@
         .about h2 {
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
+            padding-left: 60px;
+            padding-right: 60px;
         }
 
         .about h3 {
@@ -190,15 +195,69 @@
         .about p {
             font-family: 'Roboto', sans-serif;
             font-weight: 300;
-            padding-top: 200px;
+            padding-left: 60px;
+            padding-right: 60px;
+            padding-top: 20px;
         }
 
         .projects {
             height: 800px;
+            background-color: lightgray;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            flex: 0 1 30%;
+            background: white;
+            flex: 0 1 calc(25% - 1em);
+        }
+
+        .card a {
+            color: black;
+            text-decoration: none;
+
+        }
+
+        @media screen and (min-width: 40em) {
+            .cards {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .card {
+                flex: 0 1 calc(50% - 1em);
+            }
+        }
+
+        @media screen and (min-width: 60em) {
+          
+            .card {
+                flex: 0 1 calc(50% - 1em);
+            }
+        }
+
+
+        @media screen and (min-width: 52em) {
+            .centered {}
+        }
+
+
+        img {
+            display: block;
+            border: 0;
+            width: 100%;
+            height: auto;
         }
 
         .skills {
             height: 800px;
+            background-color: lightgray;
         }
     </style>
 </head>
@@ -225,12 +284,13 @@
         <img src="russ.jpg" alt="">
     </div>
 
-    <div class="about">
+    <div class="section_bar">
         <a id="about_section">
-            <div class="section_bar">
-                <h3>ABOUT</h3>
-            </div>
+            <h3>ABOUT</h3>
         </a>
+    </div>
+    <div class="about">
+
         <h2>My new personal statement will go in this area once I write it.</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et suscipit sem. Aliquam dolor ipsum,
             convallis eu dolor ut, ultricies mattis dolor. Quisque ac diam at nisl mattis tincidunt. Duis aliquet purus
@@ -243,12 +303,85 @@
             condimentum. Pellentesque velit mi, consectetur id ipsum eget, mollis varius dui.</p>
     </div>
 
+    <a id="projects_section">
+        <div class="section_bar">
+            <h3>PROJECTS</h3>
+        </div>
+    </a>
+
     <div class="projects">
-        <a id="projects_section">
-            <div class="section_bar">
-                <h3>PROJECTS</h3>
+        <section class="cards">
+
+            <div class="card">
+                <a href="#">
+                    <picture class="thumbnail">
+                        <img src="test-texture2.jpg" alt="">
+
+                    </picture>
+
+                    <div class="card_content">
+                        <h2>The Big Shop</h2>
+                        <p>
+                            A web app that I made with the spoonacular API.
+                        </p>
+
+                    </div>
+                </a>
             </div>
-        </a>
+
+            <div class="card">
+                <a href="#">
+                    <picture class="thumbnail">
+                        <img src="test-texture3.jpg" alt="">
+
+                    </picture>
+
+                    <div class="card_content">
+                        <h2>To Do list App</h2>
+                        <p>
+                            Create and delete all the things with this Django based web app.
+                        </p>
+
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="#">
+                    <picture class="thumbnail">
+                        <img src="test-texture.jpg" alt="">
+
+                    </picture>
+
+                    <div class="card_content">
+                        <h2>A Cool Blog</h2>
+                        <p>
+                            A blog where the many jagged pieces of my musical taste come together.
+                        </p>
+
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <a href="#">
+                    <picture class="thumbnail">
+                        <img src="test-texture2.jpg" alt="">
+
+                    </picture>
+
+                    <div class="card_content">
+                        <h2>One of the converter labs</h2>
+                        <p>
+                            One of the harder labs which I will choose and spruse up.
+                        </p>
+
+                    </div>
+                </a>
+            </div>
+
+
+        </section>
     </div>
 
     <div class="skills">
