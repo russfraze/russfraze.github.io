@@ -8,7 +8,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
         * {
@@ -24,8 +25,7 @@
         h5,
         h6,
         p {
-            font-family: 'Roboto', sans-serif;
-
+            font-family: 'Barlow', sans-serif;
         }
 
 
@@ -129,7 +129,7 @@
         }
 
         .toggle .line1 {
-            transform: rotate(-45deg) translate(-5px, 6px);
+            transform: rotate(-45deg) translate(-4px, 6px);
         }
 
         .toggle .line2 {
@@ -137,7 +137,7 @@
         }
 
         .toggle .line3 {
-            transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-4px, -6px);
         }
 
         .landing {
@@ -170,6 +170,7 @@
             background-color: lightgray;
             display: flex;
             flex-direction: column;
+            align-items: center;
             justify-content: center;
         }
 
@@ -200,23 +201,28 @@
             padding-top: 20px;
         }
 
+        .about_text {
+            max-width: 750px;
+        }
+
         .projects {
             display: flex;
             flex-direction: column;
             justify-content: center;
             height: 92vh;
-            background-color: lightgray;
+            background-color: #2a2a2a;
         }
 
         .cards {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            width: 1050px;
         }
 
         .card {
             flex: 0 1 30%;
-            background: white;
+            background: #aeb1ba;
             flex: 0 1 calc(25% - 1em);
             max-width: 350px;
             margin-left: 5px;
@@ -224,27 +230,42 @@
         }
 
         .card a {
-            color: black;
             text-decoration: none;
-
         }
 
-        .card_content{
-            margin: 7px;
+        .card_text {
+            color: #2a2a2a;
+            padding-left: 35px;
+            padding-bottom: 35px;
         }
 
-        .card p{
-            font-weight: 300;
+        .card_text p {
+            font-weight: 100;
+        }
+
+        .card p {
+            font-weight: 200;
             font-size: 14px;
             padding-bottom: 10px;
         }
 
-        .card h2{
+        .card h2 {
             font-size: 14px;
             letter-spacing: 2px;
             padding-top: 12px;
             padding-bottom: 7px;
         }
+
+        .git {
+            scale: 20%;
+            color: red;
+            opacity: 50%;
+            width: 45px;
+            height: 45px;
+            margin-right: 12px;
+        }
+
+   
 
         @media screen and (min-width:320px) {
             .cards {
@@ -259,7 +280,7 @@
         }
 
         @media screen and (min-width:600px) {
-          
+
             .card {
                 flex: 0 1 calc(48% - 1em);
             }
@@ -269,7 +290,7 @@
         @media screen and (min-width: 992px) {
             .card {
                 flex: 0 1 calc(24% - 1em);
-            }  
+            }
         }
 
 
@@ -316,16 +337,23 @@
     </div>
     <div class="about">
 
-        <h2>My new personal statement will go in this area once I write it.</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et suscipit sem. Aliquam dolor ipsum,
-            convallis eu dolor ut, ultricies mattis dolor. Quisque ac diam at nisl mattis tincidunt. Duis aliquet purus
-            sit amet sem vehicula, sit amet porta tortor tincidunt. Sed arcu eros, sollicitudin sed urna quis, malesuada
-            sollicitudin enim. Fusce et pharetra eros, vel tincidunt libero. Nulla eget cursus dolor. Donec sit amet
-            consequat nisl. </p>
+        <div class="about_text">
+            <h2>My new personal statement will go in this area once I write it.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et suscipit sem. Aliquam dolor ipsum,
+                convallis eu dolor ut, ultricies mattis dolor. Quisque ac diam at nisl mattis tincidunt. Duis aliquet
+                purus
+                sit amet sem vehicula, sit amet porta tortor tincidunt. Sed arcu eros, sollicitudin sed urna quis,
+                malesuada
+                sollicitudin enim. Fusce et pharetra eros, vel tincidunt libero. Nulla eget cursus dolor. Donec sit amet
+                consequat nisl. </p>
 
-        <p> Maecenas vehicula id dui id gravida. Donec nunc enim, tincidunt vel odio vitae, commodo tempor augue. Ut ac
-            lectus quis dui auctor egestas. Phasellus et aliquam arcu, non bibendum odio. Curabitur volutpat a nunc sed
-            condimentum. Pellentesque velit mi, consectetur id ipsum eget, mollis varius dui.</p>
+            <p> Maecenas vehicula id dui id gravida. Donec nunc enim, tincidunt vel odio vitae, commodo tempor augue. Ut
+                ac
+                lectus quis dui auctor egestas. Phasellus et aliquam arcu, non bibendum odio. Curabitur volutpat a nunc
+                sed
+                condimentum. Pellentesque velit mi, consectetur id ipsum eget, mollis varius dui.</p>
+        </div>
+
     </div>
 
     <a id="projects_section">
@@ -338,71 +366,85 @@
         <section class="cards">
 
             <div class="card">
-                <a href="#">
-                    <picture class="thumbnail">
-                        <img src="test-texture2.jpg" alt="">
 
-                    </picture>
-
-                    <div class="card_content">
-                        <h2>The Big Shop</h2>
-                        <p>
-                            A web app that I made with the spoonacular API.
-                        </p>
-
-                    </div>
+                <a href="">
+                    <img class="git" src="github-icon-for-resume-12.jpg.png" alt="">
                 </a>
+                <picture class="thumbnail">
+                    <img src="shop.png" alt="">
+
+                </picture>
+
+
+                <div class="card_text">
+                    <h3>The Big Shop</h3>
+                    <p>
+                        A web app that I made with the spoonacular API.
+                    </p>
+                </div>
+
+
             </div>
 
             <div class="card">
-                <a href="#">
-                    <picture class="thumbnail">
-                        <img src="test-texture3.jpg" alt="">
 
-                    </picture>
-
-                    <div class="card_content">
-                        <h2>To Do list App</h2>
-                        <p>
-                            Create and delete all the things with this Django based web app.
-                        </p>
-
-                    </div>
+                <a href="https://github.com/PdxCodeGuild/class_eagle/tree/main/Code/Russell/3%20Django/lab2_todo">
+                    <img class="git" src="github-icon-for-resume-12.jpg.png" alt="">
                 </a>
+                <picture class="thumbnail">
+                    <img src="misc3.png" alt="">
+
+                </picture>
+
+                <div class="card_text">
+                    <h3>To Do list App</h3>
+                    <p>
+                        Create and delete all the things with this Django based web app.
+                    </p>
+                </div>
+
             </div>
 
             <div class="card">
-                <a href="#">
-                    <picture class="thumbnail">
-                        <img src="test-texture.jpg" alt="">
 
-                    </picture>
-
-                    <div class="card_content">
-                        <h2>A Cool Blog</h2>
-                        <p>
-                            A blog where the many jagged pieces of my musical taste come together.
-                        </p>
-
-                    </div>
+                <a href="">
+                    <img class="git" src="github-icon-for-resume-12.jpg.png" alt="">
                 </a>
+                <picture class="thumbnail">
+                    <img src="Musicblog.png" alt="">
+
+                </picture>
+
+
+                <div class="card_text">
+                    <h3>A Cool Blog</h3>
+                    <p>
+                        A blog where the many jagged pieces of my musical taste come together.
+                    </p>
+                </div>
+
+
             </div>
 
             <div class="card">
-                <a href="#">
-                    <picture class="thumbnail">
-                        <img src="test-texture2.jpg" alt="">
 
-                    </picture>
-
-                    <div class="card_content">
-                        <h2>One of the converter labs</h2>
-                        <p>
-                            One of the harder labs which I will choose and spruse up.
-                        </p>
-
-                    </div>
+                <a href="">
+                    <img class="git" src="github-icon-for-resume-12.jpg.png" alt="">
                 </a>
+                <picture class="thumbnail">
+                    <img src="misc.png" alt="">
+
+                </picture>
+
+                <div class="card_text">
+                    <h3>One of the converter labs</h3>
+                    <p>
+                        One of the harder labs which I will choose and spruse up.
+                    </p>
+                </div>
+
+
+
             </div>
 
 
