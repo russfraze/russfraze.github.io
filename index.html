@@ -36,7 +36,7 @@
             align-items: center;
             min-height: 8vh;
             font-family: 'Roboto', sans-serif;
-            background-color: darkslategray;
+            background-color: #2a2a2a;
         }
 
         .sticky {
@@ -146,7 +146,7 @@
             justify-content: center;
             align-items: center;
             height: 92vh;
-            background-color: darkolivegreen;
+            background-color: #2a2a2a;
         }
 
         .landing img {
@@ -156,77 +156,90 @@
         }
 
 
-        .section_bar {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            background-color: darkslategray;
-            min-height: 8vh;
-        }
+   
 
         .about {
             height: 92vh;
-            background-color: lightgray;
+            background-color: rgb(0, 0, 0);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
 
-        .section_bar h3 {
-            color: rgb(209, 207, 207);
-            letter-spacing: 5px;
-            padding-left: 25px;
-            /* padding-top: 28px; */
+        .about_panel {
+            display: flex;
+            background-color: #2a2a2a;
+            width: 1100px;
+
         }
 
-        .about h2 {
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            padding-left: 60px;
-            padding-right: 60px;
+        .neon_panel{
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: 500px;
+            background-color: #cdfe02;
         }
 
         .about h3 {
             color: rgb(209, 207, 207);
-            letter-spacing: 5px;
+            font-weight: 500;
+            padding-left: 40px;
+            padding-top: 20px;
+            font-size: 32px;
         }
 
         .about p {
-            font-family: 'Roboto', sans-serif;
             font-weight: 300;
             padding-left: 60px;
             padding-right: 60px;
-            padding-top: 20px;
+            padding-top: 35px;
+            color: #aeb1ba;
         }
 
         .about_text {
             max-width: 750px;
+            padding-bottom: 65px;
+        }
+
+
+        .title_and_cards{
+            display: flex;
+            flex-direction: column;
+            width: 1000;
+            /* background-color: red; */
+            
         }
 
         .projects {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            height: 92vh;
+            justify-content: flex-end;
+            align-items: center;
+            /* height: 92vh; */
             background-color: #2a2a2a;
+        }
+
+        .projects h2 {
+            color: rgb(209, 207, 207);
+            font-weight: 500;
+            padding-bottom: 100px;
+            padding-top: 20px;
+            font-size: 46px;
         }
 
         .cards {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            width: 1050px;
+            justify-content: center;
+            max-width: 1100px;
         }
 
         .card {
             flex: 0 1 30%;
             background: #aeb1ba;
             flex: 0 1 calc(25% - 1em);
-            max-width: 350px;
-            margin-left: 5px;
-            margin-right: 5px;
         }
 
         .card a {
@@ -241,37 +254,35 @@
 
         .card_text p {
             font-weight: 100;
+            margin-right: 60px;
         }
 
-        .card p {
-            font-weight: 200;
-            font-size: 14px;
-            padding-bottom: 10px;
-        }
-
-        .card h2 {
-            font-size: 14px;
-            letter-spacing: 2px;
+        .card h3 {
             padding-top: 12px;
             padding-bottom: 7px;
         }
 
         .git {
             scale: 20%;
-            color: red;
             opacity: 50%;
             width: 45px;
             height: 45px;
             margin-right: 12px;
         }
 
-   
+        .thumbnail img{
+            width: 65%;
+            padding-left: 33px;
+            padding-top: 100px;
+        }
+
+
 
         @media screen and (min-width:320px) {
             .cards {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
+                justify-content: space-between;
             }
 
             .card {
@@ -330,125 +341,134 @@
         <img src="russ.jpg" alt="">
     </div>
 
-    <div class="section_bar">
-        <a id="about_section">
-            <h3>ABOUT</h3>
-        </a>
-    </div>
+    
+    
     <div class="about">
+        <a id="about_section">
+            <h2>ABOUT</h2>
+        </a>
 
-        <div class="about_text">
-            <h2>My new personal statement will go in this area once I write it.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et suscipit sem. Aliquam dolor ipsum,
-                convallis eu dolor ut, ultricies mattis dolor. Quisque ac diam at nisl mattis tincidunt. Duis aliquet
-                purus
-                sit amet sem vehicula, sit amet porta tortor tincidunt. Sed arcu eros, sollicitudin sed urna quis,
-                malesuada
-                sollicitudin enim. Fusce et pharetra eros, vel tincidunt libero. Nulla eget cursus dolor. Donec sit amet
-                consequat nisl. </p>
+        <div class="about_panel">
+            <div class="about_text">
+                <h3>My new personal statement will go here.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et suscipit sem. Aliquam dolor ipsum,
+                    convallis eu dolor ut, ultricies mattis dolor. Quisque ac diam at nisl mattis tincidunt. Duis aliquet
+                    purus
+                    sit amet sem vehicula, sit amet porta tortor tincidunt. Sed arcu eros, sollicitudin sed urna quis,
+                    malesuada
+                    sollicitudin enim. Fusce et pharetra eros, vel tincidunt libero. Nulla eget cursus dolor. Donec sit amet
+                    consequat nisl. </p>
 
-            <p> Maecenas vehicula id dui id gravida. Donec nunc enim, tincidunt vel odio vitae, commodo tempor augue. Ut
-                ac
-                lectus quis dui auctor egestas. Phasellus et aliquam arcu, non bibendum odio. Curabitur volutpat a nunc
-                sed
-                condimentum. Pellentesque velit mi, consectetur id ipsum eget, mollis varius dui.</p>
+                <p> Maecenas vehicula id dui id gravida. Donec nunc enim, tincidunt vel odio vitae, commodo tempor augue. Ut
+                    ac
+                    lectus quis dui auctor egestas. Phasellus et aliquam arcu, non bibendum odio. Curabitur volutpat a nunc
+                    sed
+                    condimentum. Pellentesque velit mi, consectetur id ipsum eget, mollis varius dui.</p>
+            </div>
+
+            <div class="neon_panel">
+                <h1>LINKEDIN</h1>
+                <h1>RUSSELL.FRAZE@GMAIL</h1>
+                <h1>718.413.0650</h1>
+            </div>
         </div>
 
     </div>
 
-    <a id="projects_section">
-        <div class="section_bar">
-            <h3>PROJECTS</h3>
-        </div>
-    </a>
 
     <div class="projects">
-        <section class="cards">
 
-            <div class="card">
+        <div class="title_and_cards">
 
-                <a href="">
-                    <img class="git" src="github-icon-for-resume-12.jpg.png" alt="">
-                </a>
-                <picture class="thumbnail">
-                    <img src="shop.png" alt="">
+            <a id="projects_section">
+                <h2>PROJECTS</h2>
+            </a>
 
-                </picture>
+            <section class="cards">
+
+                <div class="card">
+
+                    <a href="">
+                        <img class="git" src="github-icon-for-resume-12.jpg.png" alt="">
+                    </a>
+                    <picture class="thumbnail">
+                        <img src="shop.png" alt="">
+
+                    </picture>
 
 
-                <div class="card_text">
-                    <h3>The Big Shop</h3>
-                    <p>
-                        A web app that I made with the spoonacular API.
-                    </p>
+                    <div class="card_text">
+                        <h3>The Big Shop</h3>
+                        <p>
+                            A web app that I made with the spoonacular API.
+                        </p>
+                    </div>
+
+
                 </div>
 
+                <div class="card">
 
-            </div>
+                    <a href="https://github.com/PdxCodeGuild/class_eagle/tree/main/Code/Russell/3%20Django/lab2_todo">
+                        <img class="git" src="github-icon-for-resume-12.jpg.png" alt="">
+                    </a>
+                    <picture class="thumbnail">
+                        <img src="misc3.png" alt="">
 
-            <div class="card">
+                    </picture>
 
-                <a href="https://github.com/PdxCodeGuild/class_eagle/tree/main/Code/Russell/3%20Django/lab2_todo">
-                    <img class="git" src="github-icon-for-resume-12.jpg.png" alt="">
-                </a>
-                <picture class="thumbnail">
-                    <img src="misc3.png" alt="">
+                    <div class="card_text">
+                        <h3>To Do list App</h3>
+                        <p>
+                            Create and delete all the things with this Django based web app.
+                        </p>
+                    </div>
 
-                </picture>
-
-                <div class="card_text">
-                    <h3>To Do list App</h3>
-                    <p>
-                        Create and delete all the things with this Django based web app.
-                    </p>
                 </div>
 
-            </div>
+                <div class="card">
 
-            <div class="card">
+                    <a href="">
+                        <img class="git" src="github-icon-for-resume-12.jpg.png" alt="">
+                    </a>
+                    <picture class="thumbnail">
+                        <img src="Musicblog.png" alt="">
 
-                <a href="">
-                    <img class="git" src="github-icon-for-resume-12.jpg.png" alt="">
-                </a>
-                <picture class="thumbnail">
-                    <img src="Musicblog.png" alt="">
-
-                </picture>
+                    </picture>
 
 
-                <div class="card_text">
-                    <h3>A Cool Blog</h3>
-                    <p>
-                        A blog where the many jagged pieces of my musical taste come together.
-                    </p>
+                    <div class="card_text">
+                        <h3>A Cool Blog</h3>
+                        <p>
+                            A blog where the many jagged pieces of my musical taste come together.
+                        </p>
+                    </div>
+
+
                 </div>
 
+                <div class="card">
 
-            </div>
+                    <a href="">
+                        <img class="git" src="github-icon-for-resume-12.jpg.png" alt="">
+                    </a>
+                    <picture class="thumbnail">
+                        <img src="misc.png" alt="">
 
-            <div class="card">
+                    </picture>
 
-                <a href="">
-                    <img class="git" src="github-icon-for-resume-12.jpg.png" alt="">
-                </a>
-                <picture class="thumbnail">
-                    <img src="misc.png" alt="">
+                    <div class="card_text">
+                        <h3>One of the labs</h3>
+                        <p>
+                            One of the harder labs which I will choose and spruse up.
+                        </p>
+                    </div>
 
-                </picture>
-
-                <div class="card_text">
-                    <h3>One of the converter labs</h3>
-                    <p>
-                        One of the harder labs which I will choose and spruse up.
-                    </p>
                 </div>
 
+            </section>
+        </div>
 
-
-            </div>
-
-
-        </section>
     </div>
 
     <div class="skills">
