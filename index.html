@@ -156,31 +156,25 @@
         }
 
 
-   
+
 
         .about {
-            height: 92vh;
+            /* height: 92vh; */
             background-color: rgb(0, 0, 0);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            padding-bottom: 15px;
         }
 
         .about_panel {
             display: flex;
             background-color: #2a2a2a;
-            width: 1100px;
-
+            max-width: 1100px;
+            overflow: hidden;
         }
 
-        .neon_panel{
-            display: flex;
-            flex-direction: column;
-            width: 500px;
-            height: 500px;
-            background-color: #cdfe02;
-        }
 
         .about h3 {
             color: rgb(209, 207, 207);
@@ -188,6 +182,14 @@
             padding-left: 40px;
             padding-top: 20px;
             font-size: 32px;
+        }
+
+        .about h2 {
+            color: rgb(209, 207, 207);
+            font-weight: 500;
+            padding-bottom: 100px;
+            padding-top: 20px;
+            font-size: 46px;
         }
 
         .about p {
@@ -203,13 +205,47 @@
             padding-bottom: 65px;
         }
 
-
-        .title_and_cards{
+        .neon_panel {
             display: flex;
             flex-direction: column;
-            width: 1000;
+            justify-content: center;
+            width: 500px;
+            height: 500px;
+            background-color: #cdfe02;
+        }
+
+        .neon_panel_stuff {
+            padding-left: 20px;
+        }
+
+        .neon_panel h1{
+            padding-bottom: 20px;
+        }
+
+        .button {
+            background-color: rgb(0, 0, 0);
+            color: #aeb1ba;
+            width: 147px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            outline: none;
+            border: 0;
+            cursor: pointer;
+            border-radius: 9px;
+            font-weight: 900;
+        }
+
+
+        /* Projects section starts here -----------------------------*/
+
+        .title_and_cards {
+            display: flex;
+            flex-direction: column;
+            /* width: 1000; */
             /* background-color: red; */
-            
+
         }
 
         .projects {
@@ -240,6 +276,8 @@
             flex: 0 1 30%;
             background: #aeb1ba;
             flex: 0 1 calc(25% - 1em);
+            margin-right: 5px;
+            margin-bottom: 5px;
         }
 
         .card a {
@@ -270,7 +308,7 @@
             margin-right: 12px;
         }
 
-        .thumbnail img{
+        .thumbnail img {
             width: 65%;
             padding-left: 33px;
             padding-top: 100px;
@@ -282,7 +320,7 @@
             .cards {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: center;
             }
 
             .card {
@@ -293,12 +331,12 @@
         @media screen and (min-width:600px) {
 
             .card {
-                flex: 0 1 calc(48% - 1em);
+                flex: 0 1 calc(40% - 1em);
             }
         }
 
 
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 1050px) {
             .card {
                 flex: 0 1 calc(24% - 1em);
             }
@@ -313,8 +351,50 @@
         }
 
         .skills {
-            height: 100vh;
-            background-color: lightgray;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .skills_panel {
+            display: flex;
+            background-color: #2a2a2a;
+            width: 1100px;
+            
+        }
+
+        .line{
+            height: 3px;
+            width: 250px;
+            background-color: #cdfe02;
+            margin-bottom: 8px;
+        }
+
+        .front{
+            padding-left: 45px;
+            padding-bottom: 45px;
+        }
+        .back{
+            padding-left: 45px;
+        }
+        .other{
+            padding-left: 45px;
+        }
+        .skills h2{
+            color: rgb(209, 207, 207);
+            font-weight: 500;
+            padding-bottom: 100px;
+            padding-top: 20px;
+            font-size: 46px;
+        }
+        .skills h3{
+            color: rgb(209, 207, 207);
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+        .skills p{
+            color: rgb(209, 207, 207);
+            padding-bottom: 10px;
         }
     </style>
 </head>
@@ -341,36 +421,49 @@
         <img src="russ.jpg" alt="">
     </div>
 
-    
-    
+
+
     <div class="about">
-        <a id="about_section">
-            <h2>ABOUT</h2>
-        </a>
 
-        <div class="about_panel">
-            <div class="about_text">
-                <h3>My new personal statement will go here.</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et suscipit sem. Aliquam dolor ipsum,
-                    convallis eu dolor ut, ultricies mattis dolor. Quisque ac diam at nisl mattis tincidunt. Duis aliquet
-                    purus
-                    sit amet sem vehicula, sit amet porta tortor tincidunt. Sed arcu eros, sollicitudin sed urna quis,
-                    malesuada
-                    sollicitudin enim. Fusce et pharetra eros, vel tincidunt libero. Nulla eget cursus dolor. Donec sit amet
-                    consequat nisl. </p>
+        <div class="about_centered">
 
-                <p> Maecenas vehicula id dui id gravida. Donec nunc enim, tincidunt vel odio vitae, commodo tempor augue. Ut
-                    ac
-                    lectus quis dui auctor egestas. Phasellus et aliquam arcu, non bibendum odio. Curabitur volutpat a nunc
-                    sed
-                    condimentum. Pellentesque velit mi, consectetur id ipsum eget, mollis varius dui.</p>
+            <a id="about_section">
+                <h2>ABOUT</h2>
+            </a>
+
+            <div class="about_panel">
+                <div class="about_text">
+                    <h3>My new personal statement will go here.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et suscipit sem. Aliquam dolor
+                        ipsum,
+                        convallis eu dolor ut, ultricies mattis dolor. Quisque ac diam at nisl mattis tincidunt. Duis
+                        aliquet
+                        purus
+                        sit amet sem vehicula, sit amet porta tortor tincidunt. Sed arcu eros, sollicitudin sed urna quis,
+                        malesuada
+                        sollicitudin enim. Fusce et pharetra eros, vel tincidunt libero. Nulla eget cursus dolor. Donec sit
+                        amet
+                        consequat nisl. </p>
+
+                    <p> Maecenas vehicula id dui id gravida. Donec nunc enim, tincidunt vel odio vitae, commodo tempor
+                        augue. Ut
+                        ac
+                        lectus quis dui auctor egestas. Phasellus et aliquam arcu, non bibendum odio. Curabitur volutpat a
+                        nunc
+                        sed
+                        condimentum. Pellentesque velit mi, consectetur id ipsum eget, mollis varius dui.</p>
+                </div>
+
+                <div class="neon_panel">
+                        <div class="neon_panel_stuff">
+                        <h1>LINKEDIN</h1>
+                        <h1>RUSSELL.FRAZE@GMAIL</h1>
+                        <h1>718.413.0650</h1>
+                        <button class="button">Download Resume</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="neon_panel">
-                <h1>LINKEDIN</h1>
-                <h1>RUSSELL.FRAZE@GMAIL</h1>
-                <h1>718.413.0650</h1>
-            </div>
         </div>
 
     </div>
@@ -472,9 +565,44 @@
     </div>
 
     <div class="skills">
-        <a id="skills_section"></a>
-        <div class="section_bar">
-            <h3>SKILLS</h3>
+
+        <div class="skills_centered">
+            <div>
+                <a id="skills_section"></a>
+                <div class="section_bar">
+                    <h2>SKILLS</h2>
+                </div>
+
+                <div class="skills_panel">
+
+                    <div class="front">
+                        <h3>Front End</h3>
+                        <div class="line"></div>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JavaScript</p>
+                        <p>Bootstrap</p>
+                        <p>Materialize</p>
+                    </div>
+
+                    <div class="back">
+                        <h3>Back End</h3>
+                        <div class="line"></div>
+                        <p>Python</p>
+                        <p>Flask</p>
+                        <p>Django</p>
+                        <p>Vue</p>
+                    </div>
+
+                    <div class="other">
+                        <h3>Other</h3>
+                        <div class="line"></div>
+                        <p>GitHub</p>
+                        <p>Adobe Creative Suite</p>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 
