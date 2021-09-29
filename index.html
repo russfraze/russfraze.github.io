@@ -172,7 +172,6 @@
             display: flex;
             background-color: #2a2a2a;
             max-width: 1100px;
-            overflow: hidden;
         }
 
 
@@ -192,6 +191,10 @@
             font-size: 46px;
         }
 
+        .about h1{
+            text-decoration: none;
+        }
+
         .about p {
             font-weight: 300;
             padding-left: 60px;
@@ -201,7 +204,7 @@
         }
 
         .about_text {
-            max-width: 750px;
+            min-width: 400px;
             padding-bottom: 65px;
         }
 
@@ -209,7 +212,7 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 500px;
+            min-width: 500px;
             height: 500px;
             background-color: #cdfe02;
         }
@@ -251,7 +254,7 @@
         .projects {
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            /* justify-content: flex-end; */
             align-items: center;
             /* height: 92vh; */
             background-color: #2a2a2a;
@@ -267,7 +270,7 @@
 
         .cards {
             display: flex;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
             justify-content: center;
             max-width: 1100px;
         }
@@ -326,12 +329,22 @@
             .card {
                 flex: 0 1 calc(80% - 1em);
             }
+
+            .about_panel {
+                display: flex;
+                /* flex-wrap: wrap; */
+                justify-content: center;
+            }
         }
 
         @media screen and (min-width:600px) {
 
             .card {
                 flex: 0 1 calc(40% - 1em);
+            }
+
+            .about_panel {
+                display: flex;
             }
         }
 
@@ -352,15 +365,22 @@
 
         .skills {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             background-color: rgb(0, 0, 0);
+        }
+
+        .skills_centered {
+            display: flex;
+            flex-direction: column;
         }
 
         .skills_panel {
             display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
             background-color: #2a2a2a;
-            width: 1100px;
-            
+
         }
 
         .line{
@@ -371,13 +391,16 @@
         }
 
         .front{
+            /* display: flex; */
             padding-left: 45px;
             padding-bottom: 45px;
         }
         .back{
+            /* display: flex; */
             padding-left: 45px;
         }
         .other{
+            /* display: flex; */
             padding-left: 45px;
         }
         .skills h2{
