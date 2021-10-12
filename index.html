@@ -215,8 +215,11 @@
         }
 
         .about h1 {
+            display: flex;
             text-decoration: none;
             color: inherit;
+            flex-wrap: wrap;
+            word-break: break-all;
         }
 
         .about p {
@@ -236,12 +239,14 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            min-width: 500px;
+            /* min-width: 500px; */
             height: 500px;
             background-color: #cdfe02;
         }
 
         .neon_panel_stuff {
+            display: flex;
+            flex-direction: column;
             padding-left: 20px;
         }
 
@@ -356,13 +361,17 @@
                 flex: 0 1 calc(80% - 1em);
             }
 
+            .about_centered {
+                width: 300px;
+            }
             .neon_panel {
-                /* min-width: 300px; */
+                width: 300px;
             }
 
-            .about_centered {
-                /* width: 300px; */
+            .neon_panel_stuff {
+                width: 300px;
             }
+
         }
 
         @media screen and (min-width:600px) {
@@ -376,7 +385,7 @@
                 flex-wrap: wrap;
             } */
             .neon_panel {
-               
+                min-width: 500px;
             }
             .about_centered {
                 width: 500px;
