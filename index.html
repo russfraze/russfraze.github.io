@@ -16,6 +16,7 @@
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
+            border: 1px solid red;
         }
 
         h1,
@@ -28,7 +29,7 @@
             font-family: 'Barlow', sans-serif;
         }
 
-        h2{
+        h2 {
             color: rgb(209, 207, 207);
             font-weight: 500;
             padding-bottom: 100px;
@@ -167,7 +168,7 @@
             max-height: 365px;
             max-width: 365px;
             border-radius: 50%;
-            
+
         }
 
 
@@ -183,12 +184,16 @@
             padding-bottom: 100px;
         }
 
+        .about_centered {
+            width: 1100px;
+        }
+
         .about_panel {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             background-color: #2a2a2a;
-            width: 1100px;
+            /* width: 1100px; */
         }
 
 
@@ -209,7 +214,7 @@
             letter-spacing: 5px;
         }
 
-        .about h1{
+        .about h1 {
             text-decoration: none;
             color: inherit;
         }
@@ -223,7 +228,7 @@
         }
 
         .about_text {
-            max-width: 550px;
+            /* max-width: 550px; */
             padding-bottom: 55px;
         }
 
@@ -240,7 +245,7 @@
             padding-left: 20px;
         }
 
-        .neon_panel h1{
+        .neon_panel h1 {
             padding-bottom: 20px;
         }
 
@@ -325,7 +330,7 @@
         }
 
         .git {
-            
+
             width: 45px;
             height: 45px;
             margin-left: 12px;
@@ -351,11 +356,13 @@
                 flex: 0 1 calc(80% - 1em);
             }
 
-            /* .about_panel {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-            } */
+            .neon_panel {
+                /* min-width: 300px; */
+            }
+
+            .about_centered {
+                /* width: 300px; */
+            }
         }
 
         @media screen and (min-width:600px) {
@@ -368,6 +375,12 @@
                 display: flex;
                 flex-wrap: wrap;
             } */
+            .neon_panel {
+               
+            }
+            .about_centered {
+                width: 500px;
+            }
         }
 
 
@@ -380,14 +393,27 @@
                 display: flex;
                 flex-wrap: wrap;
             } */
+
+            .about_centered {
+                width: 500px;
+            }
         }
 
-        @media screen and (max-width: 1000px) {
-              .about_panel {
+        @media screen and (max-width: 1100px) {
+            .about_panel {
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
+            }
+
+            /* .about_centered {
                 width: 500px;
+            } */
+        }
+
+        @media screen and (min-width: 1100px) {
+             .about_centered {
+                width: 1100px;
             }
         }
 
@@ -419,38 +445,41 @@
             background-color: #2a2a2a;
         }
 
-        .fill{
+        .fill {
             width: 355px;
             height: 100px;
         }
 
-        .line{
+        .line {
             height: 3px;
             width: 250px;
             background-color: #cdfe02;
             margin-bottom: 8px;
         }
 
-        .front{
+        .front {
             /* display: flex; */
             padding-left: 45px;
             padding-bottom: 45px;
         }
-        .back{
+
+        .back {
             /* display: flex; */
             padding-left: 45px;
         }
-        .other{
+
+        .other {
             /* display: flex; */
             padding-left: 45px;
         }
-       
-        .skills h3{
+
+        .skills h3 {
             color: rgb(209, 207, 207);
             padding-top: 30px;
             padding-bottom: 10px;
         }
-        .skills p{
+
+        .skills p {
             color: rgb(209, 207, 207);
             padding-bottom: 10px;
         }
@@ -478,7 +507,7 @@
     <div class="landing">
 
         <img src="russ.jpg" alt="">
-        
+
     </div>
 
 
@@ -499,23 +528,26 @@
                         convallis eu dolor ut, ultricies mattis dolor. Quisque ac diam at nisl mattis tincidunt. Duis
                         aliquet
                         purus
-                        sit amet sem vehicula, sit amet porta tortor tincidunt. Sed arcu eros, sollicitudin sed urna quis,
+                        sit amet sem vehicula, sit amet porta tortor tincidunt. Sed arcu eros, sollicitudin sed urna
+                        quis,
                         malesuada
-                        sollicitudin enim. Fusce et pharetra eros, vel tincidunt libero. Nulla eget cursus dolor. Donec sit
+                        sollicitudin enim. Fusce et pharetra eros, vel tincidunt libero. Nulla eget cursus dolor. Donec
+                        sit
                         amet
                         consequat nisl. </p>
 
                     <p> Maecenas vehicula id dui id gravida. Donec nunc enim, tincidunt vel odio vitae, commodo tempor
                         augue. Ut
                         ac
-                        lectus quis dui auctor egestas. Phasellus et aliquam arcu, non bibendum odio. Curabitur volutpat a
+                        lectus quis dui auctor egestas. Phasellus et aliquam arcu, non bibendum odio. Curabitur volutpat
+                        a
                         nunc
                         sed
                         condimentum. Pellentesque velit mi, consectetur id ipsum eget, mollis varius dui.</p>
                 </div>
 
                 <div class="neon_panel">
-                        <div class="neon_panel_stuff">
+                    <div class="neon_panel_stuff">
                         <h1>LINKEDIN</h1>
                         <h1>RUSSELL.FRAZE@GMAIL</h1>
                         <h1>718.413.0650</h1>
