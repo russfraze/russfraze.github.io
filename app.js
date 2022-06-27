@@ -48,7 +48,7 @@ const burgerClick = () => {
 const timeline = gsap.timeline({ defaults: { duration: 1}})
 timeline
     .to('.nav-links', {
-        width:'50%', ease: 'power',  
+        x: 0, ease: 'power',  
     })
     .to('.nav-links li', {
         opacity: 1,
