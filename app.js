@@ -32,20 +32,47 @@
 //     duration: .5, delay: .5, opacity: 1, reversed: true
 // })
 
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+const navLinks = document.querySelectorAll('.nav-links li')
 
 
 
+let width = screen.width
 
 
-let navOpen = false // used to toggle the animation
+
+window.addEventListener('resize', () => {
+    width = screen.width
+    console.log(width)
+    if (width >= 769) {
+        location.reload()
+    }
+})
+
+let navClosed = true // used to toggle the animation
 
 const burgerClick = () => {
-  navOpen = !navOpen // toggle boolean
-  navOpen ? timeline.play() : timeline.reverse();
+    if (width <= 768) {
+        navClosed = !navClosed 
+        navClosed ? timeline.reverse() : timeline.play();
+        console.log(navClosed)
+    } else {
+        navClosed = true
+        // navClosed = !navClosed
+        console.log(navClosed)
+    }
+    
 }
 
 
-const timeline = gsap.timeline({ defaults: { duration: 1}})
+burger.addEventListener('click', burgerClick)
+nav.addEventListener('click', burgerClick)
+
+const timeline = gsap.timeline(
+    { defaults: { duration: 1},
+    onReverseComplete: function(){ console.log('finish') }
+})
 timeline
     .to('.nav-links', {
         x: 0, ease: 'power',  

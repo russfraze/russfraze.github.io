@@ -72,11 +72,11 @@ nav {
 
 .nav-links li {
     list-style: none;
-    opacity: 1
+    opacity: 100;
+    color: rgb(209, 207, 207);
 }
 
 .nav-links a {
-    color: rgb(209, 207, 207);
     text-decoration: none;
 }
 
@@ -92,6 +92,7 @@ nav {
     transition: all 0.3s ease;
 
 }
+
 
 @media screen and (max-width:768px) {
     body {
@@ -122,9 +123,10 @@ nav {
 
 }
 
-.nav-active {
+
+/* .nav-active {
     transform: translateX(0%);
-}
+} */
 
 @keyframes navLinkFade {
     from {
