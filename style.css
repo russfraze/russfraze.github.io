@@ -316,6 +316,7 @@ a {
 .card_text p {
     font-weight: 100;
     margin-right: 60px;
+    word-break: keep-all;
 }
 
 .card h3 {
