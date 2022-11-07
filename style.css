@@ -211,6 +211,10 @@ a {
     word-break: break-all;
 }
 
+.color_roll:hover{
+    color: #aeb1ba; 
+}
+
 .about p {
     font-weight: 300;
     padding-left: 65px;
@@ -257,6 +261,12 @@ a {
     border-radius: 9px;
     font-weight: 900;
 }
+
+.button:hover {
+    background-color: #aeb1ba;
+} 
+
+
 
 
 /* Projects section starts here -----------------------------*/
